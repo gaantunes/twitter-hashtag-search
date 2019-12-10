@@ -30,8 +30,8 @@ public class TwitterSearchController {
 		return service.getTweetsByHashtag(hashTag, pageSize);
 	}
 	
-	@GetMapping(value = "/tweets/history/{user}")
-	public List<SimpleTweet> getTweetsByHashtag(@PathVariable String user)
+	@GetMapping(value = "/tweets/historical/{user}")
+	public List<SimpleTweet> getHistoricalTweetsByUser(@PathVariable String user)
 	{	
 		return simpleTweetService.getSimpleTweetsHistoryByUser(user);
 	}
